@@ -2,8 +2,7 @@ name: Java CI Pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   build:
@@ -20,7 +19,7 @@ jobs:
           java-version: '17'
 
       - name: Compile Java Code
-        run: javac OnlineQuizApplication.java
+        run: javac -d . OnlineQuizApplication.java
 
       - name: Run Java Program
-        run: java OnlineQuizApplication
+        run: java onlinequizapplication.OnlineQuizApplication
